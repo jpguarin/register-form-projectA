@@ -2,11 +2,51 @@
 @import "./_variables";
 
 body {
-  margin: 0;
-  font-family: $primary-font-family ;
   color: $primary-font-color;
+  font-family: $primary-font-family ;
+  font-size: 15px;
+  height: 100%;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
 }
 
+main {
+  min-height: 100vh;
+}
+
+// DISPLAY FLEX UTILITIES
+.dflex {
+  display: flex;
+}
+.flex-justify-content-center {
+  justify-content: center;
+}
+.flex-align-items-center {
+  align-items: center;
+}
+
+// BUTTONS
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.7em 1em;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid transparent;
+  &.btn-primary {
+    background-color: $color-black;
+    color: $color-white;
+    &:hover {
+      background-color: $color-primary;
+    }
+    &:disabled {
+      cursor: default;
+      opacity: 0.35;
+      &:hover {
+        background-color: $color-black;
+      }
+    }
+  }
+}
