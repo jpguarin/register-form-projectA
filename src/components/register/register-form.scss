@@ -1,0 +1,55 @@
+@import "../../_mixins";
+@import "../../_variables";
+
+.register-form {
+  padding: 2em 2em;
+  margin: 1em;
+  width: 280px;
+  @include respondTo-small {
+    border: 1px solid $color-black;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5em 0 0;
+  }
+
+  .password-validation-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .level-indicator {
+      height: 5px;
+      width: 31%;
+      background-color: lighten($color-gray, 20);
+      &.active {
+        &.score-0, 
+        &.score-1 {
+          background-color: $color-danger;
+        }
+        &.score-2 {
+          background-color: $color-warning;
+        }
+        &.score-3 {
+          background-color: $color-success;
+        }
+        &.score-4 {
+          background-color: lighten($color-success, 20);
+        }
+      }
+    }
+  }
+
+  .password-sugestions {
+    ul {
+      padding: 0 0 0 1.6em;
+
+      li {
+        font-size: 0.85em;
+        margin-bottom: 0.3em;
+        font-style: italic;
+        color: lighten($primary-font-color, 20);
+      }
+    }
+  }
+}

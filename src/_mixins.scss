@@ -1,0 +1,64 @@
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// BREAKPOINT
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$respondTo-xsmall:      480px;
+$respondTo-max-small:   767px;
+$respondTo-small:       768px;
+$respondTo-max-medium:  991px;
+$respondTo-medium:      992px;
+$respondTo-max-large:   1199px;
+$respondTo-large:       1200px;
+$respondTo-xlarge:      1900px;
+
+@mixin respondTo-xsmall {
+  @media (min-width: $respondTo-xsmall) {
+    @content;
+  }
+}
+@mixin respondTo-small {
+  @media (min-width: $respondTo-small) {
+    @content;
+  }
+}
+@mixin respondTo-medium {
+  @media (min-width: $respondTo-medium) {
+    @content;
+  }
+}
+@mixin respondTo-large {
+  @media (min-width: $respondTo-large) {
+    @content;
+  }
+}
+@mixin respondTo-xlarge {
+  @media (min-width: $respondTo-xlarge) {
+    @content;
+  }
+}
+@mixin respondTo-max-small {
+  @media (max-width: $respondTo-max-small) {
+    @content;
+  }
+}
+@mixin respondTo-max-medium {
+  @media (max-width: $respondTo-max-medium) {
+    @content;
+  }
+}
+@mixin respondTo-xsmall-small {
+  @media (min-width:$respondTo-xsmall) and (max-width:$respondTo-max-small){
+    @content;
+  }
+}
+@mixin respondTo-medium-large {
+  @media (min-width:$respondTo-medium) and (max-width:$respondTo-max-large){
+    @content;
+  }
+}
+
+@mixin respondTo-mobile-landscape {
+  @media (min-width:$respondTo-xsmall) and (max-width:$respondTo-max-medium) and (orientation : landscape){
+    @content;
+  }
+}
