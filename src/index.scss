@@ -1,0 +1,12 @@
+@import "./_mixins";
+@import "./_variables";
+
+body {
+  margin: 0;
+  font-family: $primary-font-family ;
+  color: $primary-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
